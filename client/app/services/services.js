@@ -12,7 +12,18 @@ angular.module('shortly.services', [])
     });
   };
 
-  var addOne = function () {};
+  var addOne = function (link) {
+    return $http({
+      methed: 'POST',
+      url: '/api/links',
+      data: link
+    })
+    .then(function (resp) {
+      return resp.data.token;
+    });
+
+
+  };
 
   return {
     getAll: getAll,

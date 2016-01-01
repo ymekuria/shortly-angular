@@ -37,6 +37,7 @@ describe('LinksController', function () {
     createController();
     $httpBackend.flush();
 
+
     expect(Links.getAll.called).to.equal(true);
     Links.getAll.restore();
   });
