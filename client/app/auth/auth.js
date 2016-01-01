@@ -4,7 +4,10 @@
 angular.module('shortly.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
-  $scope.user = {};
+  $scope.user = {
+    username: '',
+    password: ''
+  };
 
   $scope.signin = function () {
     Auth.signin($scope.user)
