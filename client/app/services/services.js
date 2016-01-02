@@ -14,12 +14,12 @@ angular.module('shortly.services', [])// functions are placed into a service (fa
 
   var addOne = function (link) {
     return $http({
-      metho d: 'POST',
+      method: 'POST',
       url: '/api/links',
       data: link
     })
     .then(function (resp) {
-      return resp.djjata.token;
+      return resp;
     });
 
 
