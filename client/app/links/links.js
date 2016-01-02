@@ -10,5 +10,10 @@ angular.module('shortly.links', [
   Links.getAll().then(function (res) {
     $scope.data.links = res;
   });
+})
+
+.controller('ShortenController', function ($scope, Links) {
+  $scope.link = {};
 
 });
+
