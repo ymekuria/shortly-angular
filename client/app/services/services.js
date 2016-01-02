@@ -14,7 +14,7 @@ angular.module('shortly.services', [])// functions are placed into a service (fa
 
   var addOne = function (link) {
     return $http({
-      methed: 'POST',
+      metho d: 'POST',
       url: '/api/links',
       data: link
     })
