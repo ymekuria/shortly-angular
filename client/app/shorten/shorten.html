@@ -1,5 +1,9 @@
-<div id='container'>
-<!-- Your code here -->
+<div id='container' ng-controller = 'ShortenController'>
+  <button ng-click = "changeView('links')">Links</button>
+  <form>
+      <input type='text' ng-model='link.link' >
+      <input type='submit' value='Shorten'>
+  </form>
 
 </div>
 

@@ -22,9 +22,9 @@ angular.module('shortly', [//this is for dependency injection
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
-    });
+    })
     //we should probably include an "otheriwse" case
-    //.otherwise({ redirectTo: '/signin'})
+    .otherwise({ redirectTo: '/links'});
 
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls

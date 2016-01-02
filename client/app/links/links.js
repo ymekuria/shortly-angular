@@ -2,18 +2,16 @@ angular.module('shortly.links', [
   'shortly.services'
   ])
 
-.controller('LinksController', function ($scope, Links) {
+.controller('LinksController', function ($scope, $location, Links) {
   $scope.data = {};
-
-  $scope.Links = Links;
 
   Links.getAll().then(function (res) {
     $scope.data.links = res;
   });
-})
 
-.controller('ShortenController', function ($scope, Links) {
-  $scope.link = {};
-
+  $scope.changeView = function (view) {
+    $location.path(view);
+  };
 });
+
 

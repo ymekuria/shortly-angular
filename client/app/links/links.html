@@ -1,3 +1,8 @@
-<div id='container'>
+<div id='container' ng-controller = 'LinksController'>
+  <button ng-click = "changeView('shorten')">Shorten</button>
   <!-- Your html here -->
+  <ul>
+    <li ng-repeat="url in data">{{url}}</li>
+  </ul> 
 </div>
+
