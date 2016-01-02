@@ -15,7 +15,7 @@ angular.module('shortly', [//this is for dependency injection
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
     })
-    .when('/link', {
+    .when('/links', {
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'
     })
