@@ -1,11 +1,11 @@
-angular.module('shortly', [
-  'shortly.services',
+angular.module('shortly', [//this is for dependency injection
+  'shortly.services',//our module (shortly) relies on these other modules to handle data
   'shortly.links',
   'shortly.shorten',
   'shortly.auth',
   'ngRoute'
 ])
-.config(function ($routeProvider, $httpProvider) {
+.config(function ($routeProvider, $httpProvider) {//all these pages are loaded at runtime, which allows angular to swap them in and out without reloading the entire page
   $routeProvider
     .when('/signin', {
       templateUrl: 'app/auth/signin.html',
@@ -15,7 +15,6 @@ angular.module('shortly', [
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
     })
-    // Your code here
     .when('/link', {
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'
@@ -24,6 +23,8 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     });
+    //we should probably include an "otheriwse" case
+    //.otherwise({ redirectTo: '/signin'})
 
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls

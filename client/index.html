@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='shortly'>
+<html ng-app='shortly'><!-- points to our master module -->
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
@@ -9,7 +9,7 @@
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
+    <div ng-view></div><!--this acts as a placeholder for our views. when our routes are initialized, they will dynamically be inserted here-->
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>

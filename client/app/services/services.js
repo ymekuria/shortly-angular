@@ -1,5 +1,5 @@
-angular.module('shortly.services', [])
-
+angular.module('shortly.services', [])// functions are placed into a service (factory, service, provider, value))
+                                      //when we want to allow multiple controllers to have access to the same cuntionality
 .factory('Links', function ($http) {
   // Your code here
   var getAll = function () {
@@ -19,7 +19,7 @@ angular.module('shortly.services', [])
       data: link
     })
     .then(function (resp) {
-      return resp.data.token;
+      return resp.djjata.token;
     });
 
 
