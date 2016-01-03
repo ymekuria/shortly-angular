@@ -17,10 +17,10 @@ angular.module('shortly.services', [])// functions are placed into a service (fa
       method: 'POST',
       url: '/api/links',
       data: link
-    })
-    .then(function (resp) {
-      return resp;
     });
+    // .then(function (resp) {
+    //   return resp;
+  });
 
 
   };

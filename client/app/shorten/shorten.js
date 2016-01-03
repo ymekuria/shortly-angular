@@ -3,10 +3,10 @@ angular.module('shortly.shorten', [])
 .controller('ShortenController', function ($scope, $location, Links) {
   $scope.link = {};
 
-  $scope.addLink = function (link) {
-    Links.addOne(link);
+  $scope.addLink = function () {
+    Links.addOne($scope.link);
     console.log("SHIT IS HAPPENING");
-    $scope.link.link = '';
+    $location.path('/');
   };
 
   $scope.changeView = function (view) {
