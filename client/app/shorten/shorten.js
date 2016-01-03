@@ -5,7 +5,7 @@ angular.module('shortly.shorten', [])
 
   $scope.addLink = function (link) {
     Links.addOne(link);
-    console.log("SHIT IS HAPPENING")
+    console.log("SHIT IS HAPPENING");
     $scope.link.link = '';
   };
 
