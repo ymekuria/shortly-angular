@@ -5,6 +5,8 @@ angular.module('shortly.shorten', [])
 
   $scope.addLink = function (link) {
     Links.addOne(link);
+    console.log("SHIT IS HAPPENING")
+    $scope.link.link = '';
   };
 
   $scope.changeView = function (view) {

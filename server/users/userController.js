@@ -2,8 +2,8 @@ var User = require('./userModel.js');
     Q = require('q');
     jwt = require('jwt-simple');
 
-var findUser = Q.denodeify(User.findOne, User);
-var createUser = Q.denodeify(User.create, User);
+var findUser = Q.nbind(User.findOne, User);
+var createUser = Q.nbind(User.create, User);
 
 module.exports = {
   signin: function (req, res, next) {
@@ -34,6 +34,7 @@ module.exports = {
   signup: function (req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
+    console.log('req.body:', req.body);
 
     // check to see if user already exists
     findUser({username: username})

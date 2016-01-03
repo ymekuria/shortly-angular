@@ -77,3 +77,4 @@ angular.module('shortly.services', [])// functions are placed into a service (fa
     signout: signout
   };
 });
+

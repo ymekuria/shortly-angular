@@ -5,8 +5,8 @@ angular.module('shortly.links', [
 .controller('LinksController', function ($scope, $location, Links) {
   $scope.data = {};
 
-  Links.getAll().then(function (res) {
-    $scope.data.links = res;
+  Links.getAll().then(function (data) {
+    $scope.data.links = data;
   });
 
   $scope.changeView = function (view) {
